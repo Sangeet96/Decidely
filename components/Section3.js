@@ -126,19 +126,28 @@ const Section3 = () => {
                         <div
                             key={card.id}
                             onClick={() => setSelectedCard(card.id)}
-                            className={`w-1/4 h-80 cursor-pointer transition-all duration-500 border-2 
-                            ${selectedCard === card.id ? 'rounded-full bg-cover bg-center border-blue-700' : 'rounded-[65px] border-white/55'}`}
-                            style={{
-                                backgroundImage: selectedCard === card.id ? card.bgImage : 'none'
-                            }}
+                            className={`relative w-1/4 h-80 cursor-pointer transition-all duration-500 border-2 overflow-hidden
+                            ${selectedCard === card.id ? 'rounded-full border-blue-700' : 'rounded-[65px] border-white/55'}`}
                         >
-                            <div className="flex flex-col items-center justify-center h-full">
-                                <div className="w-12 h-12">{selectedCard === card.id ? card.svg2 : card.svg1}</div>
-                                <div className={`text-2xl ${selectedCard === card.id ?'text-white':'text-white/55'} mt-2`}>{card.label}</div>
+                            {selectedCard === card.id && (
+                                <div
+                                    className="absolute inset-0 z-0 bg-cover bg-center blur-sm animate-slowspin scale-110"
+                                    style={{ backgroundImage: card.bgImage }}
+                                ></div>
+                            )}
+
+                            <div className="relative z-10 flex flex-col items-center justify-center h-full">
+                                <div className="w-12 h-12">
+                                    {selectedCard === card.id ? card.svg2 : card.svg1}
+                                </div>
+                                <div className={`text-2xl mt-2 ${selectedCard === card.id ? 'text-white' : 'text-white/55'}`}>
+                                    {card.label}
+                                </div>
                             </div>
                         </div>
                     ))}
                 </div>
+
 
                 <div className="border border-white/55 rounded-[20px] h-24">
                     <div className="w-7/12 pt-6 pb-6 pl-8 pr-8 text-lg" style={{ fontFamily: 'Inter' }}>{cards.find(c => c.id === selectedCard)?.description}</div>
