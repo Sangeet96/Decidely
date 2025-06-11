@@ -1,0 +1,19 @@
+import React from 'react'
+import Link from 'next/link'
+
+const Navbar = () => {
+    return (
+        <div className='bg-black pt-4 pb-4 pr-8 pl-8'>
+            <div className='text-white flex justify-between'>
+                <h1 className='text-3xl'>VoteSphere</h1>
+                <ul className='flex gap-4 text-xl'>
+                    <Link href={'/aboutme'} className='bg-white/20 rounded-3xl pl-4 pr-4 pt-2 pb-2'>About Me</Link>
+                    <Link href={'/contact'} className='bg-white/20 rounded-3xl pl-4 pr-4 pt-2 pb-2'>Contact</Link>
+                    <Link href={'/login'} className='bg-white text-black rounded-3xl pl-4 pr-4 pt-2 pb-2'>Login</Link>
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+export default Navbar
