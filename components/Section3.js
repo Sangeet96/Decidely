@@ -111,7 +111,7 @@ const Section3 = () => {
 
     return (
         <div>
-            <section className="h-screen pl-10 pr-10 border border-white">
+            <section className="h-screen pl-10 pr-10">
 
                 <div className="mb-16">
                     <div className="w-[55vw] text-lg mb-5 flex items-center gap-2">
@@ -126,15 +126,17 @@ const Section3 = () => {
                         <div
                             key={card.id}
                             onClick={() => setSelectedCard(card.id)}
-                            className={`relative w-1/4 h-80 cursor-pointer transition-all duration-500 border-2 overflow-hidden
-                            ${selectedCard === card.id ? 'rounded-full border-blue-700' : 'rounded-[65px] border-white/55'}`}
+                            className={`relative w-1/4 h-80 cursor-pointer border-2 overflow-hidden
+                            ${selectedCard === card.id ? 'rounded-full border-blue-700' : 'transition-all ease-in-out duration-300 rounded-[65px] border-white/55 hover:border-indigo-400'}`}
                         >
-                            {selectedCard === card.id && (
-                                <div
-                                    className="absolute inset-0 z-0 bg-cover bg-center blur-sm animate-slowspin scale-110"
-                                    style={{ backgroundImage: card.bgImage }}
-                                ></div>
-                            )}
+                            <div
+                                className={`absolute inset-0 z-0 bg-center bg-cover transition-all duration-500 ease-in-out 
+                                ${selectedCard === card.id ? 'opacity-100 blur-sm brightness-50 slowspin' : 'opacity-0 scale-0'}
+                                `}
+                                style={{
+                                    backgroundImage: card.bgImage,
+                                }}
+                            ></div>
 
                             <div className="relative z-10 flex flex-col items-center justify-center h-full">
                                 <div className="w-12 h-12">
