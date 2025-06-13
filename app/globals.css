@@ -14,3 +14,20 @@
   animation: slowspin 20s linear infinite;
   filter: blur(6px) brightness(0.4);
 }
+
+
+/* Section4 */
+.scrolling-text {
+  animation: scroll-left 20s linear infinite;
+  display: inline-flex;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+

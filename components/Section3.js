@@ -118,7 +118,7 @@ const Section3 = () => {
                         <div className="w-[40px] h-[3px] bg-white"></div>
                         <div className="text-xl font-bold" style={{ fontFamily: 'Inter' }}>For Whom?</div>
                     </div>
-                    <div className="w-[45vw] text-6xl font-medium" style={{ fontFamily: '"Inter Display"' }}>Who Should Definitely Use VoteSphere</div>
+                    <div className="w-[45vw] text-6xl font-medium leading-tight" style={{ fontFamily: '"Inter Display"' }}>Who Should Definitely Use VoteSphere</div>
                 </div>
 
                 <div className="flex gap-16 mb-8">
