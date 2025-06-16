@@ -45,8 +45,8 @@ const Footer = () => {
             </div>
 
             <ul className='flex gap-4 text-md font-semibold' style={{ fontFamily: 'Inter' }}>
-              <Link href={'/aboutme'} className='bg-white/20 rounded-3xl pl-4 pr-4 pt-2 pb-2'>About Me</Link>
-              <Link href={'/contact'} className='bg-white/20 rounded-3xl pl-4 pr-4 pt-2 pb-2'>Contact</Link>
+              <Link href={'/aboutme'} className='bg-white/20 rounded-3xl pl-4 pr-4 pt-2 pb-2 transition-all ease-in duration-200 hover:bg-[#011EFF]'>About Me</Link>
+              <Link href={'/contact'} className='bg-white/20 rounded-3xl pl-4 pr-4 pt-2 pb-2 transition-all ease-in duration-200 hover:bg-[#011EFF]'>Contact</Link>
             </ul>
 
           </div>
