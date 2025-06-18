@@ -40,7 +40,7 @@ const Section6 = () => {
           style={{ fontFamily: '"Inter Display"' }}
         >
           <span>Casting Clarity :</span>{' '}
-          <span className="text-white/55">Common Questions About VoteSphere</span>
+          <span className="text-white/55">Common Questions About Decidely</span>
         </div>
       </div>
 

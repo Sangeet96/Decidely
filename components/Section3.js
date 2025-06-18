@@ -34,8 +34,8 @@ const Section3 = () => {
         },
         {
             id: 'residents',
-            label: 'Residents',
-            description: 'Residents can use VoteSphere to easily participate in housing society decisions, elections, and polls with transparency and convenience.',
+            label: 'Housing Societies',
+            description: 'Housing Societies can use VoteSphere to easily participate in housing society decisions, elections, and polls with transparency and convenience.',
             svg1: (<svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 256 256"
@@ -118,7 +118,7 @@ const Section3 = () => {
                         <div className="w-[40px] h-[3px] bg-white"></div>
                         <div className="text-xl font-bold" style={{ fontFamily: 'Inter' }}>For Whom?</div>
                     </div>
-                    <div className="w-[45vw] text-6xl font-medium leading-tight" style={{ fontFamily: '"Inter Display"' }}>Who Should Definitely Use VoteSphere</div>
+                    <div className="w-[45vw] text-6xl font-medium leading-tight" style={{ fontFamily: '"Inter Display"' }}>Who Should Definitely Use Decidely?</div>
                 </div>
 
                 <div className="flex gap-16 mb-8">

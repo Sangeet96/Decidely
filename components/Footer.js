@@ -80,7 +80,7 @@ const Footer = () => {
 
           {/* VoteSphere centered at bottom */}
           <div className="text-[11vw] text-white text-center" style={{ fontFamily: '"Inknut Antiqua"' }}>
-            VoteSphere
+            Decidely
           </div>
         </div>
       </div>
