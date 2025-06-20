@@ -15,36 +15,36 @@ const Section5 = () => {
                 </div>
             </div>
 
-            <div>
+            <div className='font-semibold' style={{ fontFamily: 'Inder' }}>
                 <div className='mb-16'>
-                    <div className='flex text-4xl mb-16'>
+                    <div className='flex text-3xl mb-16'>
                         <span className='w-1/5 pl-5 pr-5 pt-6 pb-6 bg-[#011EFF] rounded-bl-4xl rounded-tl-4xl'>Step 1</span>
                         <span className='w-4/5 pt-5 pb-5 pl-20 pr-14 bg-[#FFFFFF1F] rounded-br-4xl rounded-tr-4xl'>Sign Up & Join</span>
                     </div>
-                    <div className='ml-6  text-4xl'>
+                    <div className='ml-6  text-3xl'>
                         <div className='bg-[#111114] pt-6 pb-6 pl-8 pr-8 rounded-4xl'>Create your account and join your community or society’s voting group.</div>
                     </div>
                 </div>
 
                 <div className='mb-16'>
-                    <div className='flex text-4xl mb-16'>
+                    <div className='flex text-3xl mb-16'>
                         <span className='w-1/5 pl-5 pr-5 pt-6 pb-6 bg-[#011EFF] rounded-bl-4xl rounded-tl-4xl'>Step 2</span>
                         <span className='w-4/5 pt-5 pb-5 pl-20 pr-14 bg-[#FFFFFF1F] rounded-br-4xl rounded-tr-4xl'>Create or Participate</span>
                     </div>
-                    <div className='ml-6 mb-16 text-4xl'>
+                    <div className='ml-6 mb-16 text-3xl'>
                         <div className='bg-[#111114] pt-6 pb-6 pl-8 pr-8 rounded-4xl'>Organizers set up elections or polls.</div>
                     </div>
-                    <div className='ml-6  text-4xl'>
+                    <div className='ml-6  text-3xl'>
                         <div className='bg-[#111114] pt-6 pb-6 pl-8 pr-8 rounded-4xl'>Voters cast their votes securely and easily.</div>
                     </div>
                 </div>
 
                 <div>
-                    <div className='flex text-4xl mb-16'>
+                    <div className='flex text-3xl mb-16'>
                         <span className='w-1/5 pl-5 pr-5 pt-6 pb-6 bg-[#011EFF] rounded-bl-4xl rounded-tl-4xl'>Step 3</span>
                         <span className='w-4/5 pt-5 pb-5 pl-20 pr-14 bg-[#FFFFFF1F] rounded-br-4xl rounded-tr-4xl'>View Results & Stay Informed</span>
                     </div>
-                    <div className='ml-6  text-4xl'>
+                    <div className='ml-6  text-3xl'>
                         <div className='bg-[#111114] pt-6 pb-6 pl-8 pr-8 rounded-4xl'>Check real-time results and stay updated on all community decisions.</div>
                     </div>
                 </div>
