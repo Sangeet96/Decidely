@@ -1,5 +1,7 @@
+'use client'
 import React from 'react'
 import Image from "next/image";
+import ScrollFloat from './ScrollFloat';
 
 const Section2 = () => {
     return (
@@ -10,7 +12,16 @@ const Section2 = () => {
                         <div className="w-[40px] h-[3px] bg-white"></div>
                         <div className="text-xl font-bold" style={{ fontFamily: 'Inter' }}>About Decidely</div>
                     </div>
-                    <div className="w-[45vw] text-6xl font-medium leading-tight" style={{ fontFamily: '"Inter Display"' }}>Why You Absolutely Should Choose Us?</div>
+                    <div className="w-[47vw] text-6xl font-medium" style={{ fontFamily: '"Inter Display"' }}>
+                        <ScrollFloat
+                            animationDuration={1.5}
+                            ease='back.inOut(2)'
+                            scrollStart='center bottom+=50%'
+                            scrollEnd='bottom bottom-=40%'
+                            stagger={0.03}
+                        >
+                            Why You Absolutely Should Choose Us?
+                        </ScrollFloat></div>
                 </div>
                 <div className="flex items-center gap-16">
                     <div className="w-1/2 flex">

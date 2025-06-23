@@ -32,7 +32,7 @@ const Navbar = () => {
     return (
         <div className={`w-auto m-auto pt-4 pb-4 pr-8 pl-8 sticky top-0 transition-all duration-300 z-50 ${showFullNav ? 'bg-transparent' : 'bg-transparent backdrop-blur-3xl rounded-4xl'}`}>
             <div className={`text-white flex items-center justify-between font-semibold`} style={{ fontFamily: 'Inter' }}>
-                <h1 className={`text-3xl transition-transform ease-in duration-300 ${showFullNav ? '' : 'translate-x-[39vw]'}`}>Decidely</h1>
+                <Link href={'/'} className={`text-3xl transition-transform ease-in duration-300 ${showFullNav ? '' : 'translate-x-[39vw]'}`}>Decidely</Link>
                 <ul className='flex gap-4 text-md'>
                     {showFullNav && (
                         <>

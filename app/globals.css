@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @keyframes slowspin {
   from {
     transform: rotate(0deg);

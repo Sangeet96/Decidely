@@ -2,6 +2,9 @@
 import React from 'react'
 import Silk from '@/components/Silk'
 import Image from 'next/image'
+import SplitText from '@/components/SplitText'
+import BlurText from '@/components/BlurText'
+import AnimatedContent from '@/components/AnimatedContent'
 
 const Contact = () => {
   return (
@@ -15,7 +18,20 @@ const Contact = () => {
           rotation={0}
         /></div>
         <section className="p-24">
-          <div className=""><h1 className="text-[11vw] text-center" style={{ fontFamily: '"Inknut Antiqua"' }}>Contact</h1></div>
+          <div className="" style={{ fontFamily: '"Inknut Antiqua"' }}>
+            <SplitText
+              text="Contact"
+              className="text-[11vw] text-center"
+              delay={150}
+              duration={0.8}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+            /></div>
           <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-black pointer-events-none z-10" />
         </section>
       </div>
@@ -31,35 +47,73 @@ const Contact = () => {
           className="text-6xl font-medium leading-tight"
           style={{ fontFamily: '"Inter Display"' }}
         >
-          <span>We'd Love to Hear From You :</span>{' '}
-          <span className="text-white/55">Get in Touch with Us Today!</span>
+          <BlurText
+            text="We'd Love to Hear From You : "
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className=""
+          />
+          <BlurText
+            text="Get in Touch with Us Today!"
+            delay={170}
+            animateBy="words"
+            direction="top"
+            className="text-white/55"
+          />
         </div>
       </div>
 
       <div className='flex justify-center items-center pl-10 pr-10 gap-5'>
         <div className='w-1/2 flex gap-18'>
-          <div className='flex flex-col gap-3'>
-            <Image
+          <AnimatedContent
+            distance={75}
+            direction="vertical"
+            reverse={false}
+            duration={1.5}
+            ease="power3.out"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.0}
+            threshold={0.2}
+            delay={0.1}
+          >
+            <div className='flex flex-col gap-3'>
+              <Image
                 src="/EmailIcon.avif"
                 alt="Background image"
                 height={60}
                 width={60}
               />
-            <p className='text-2xl semi-bold'>Email</p>
-            <p className='text-white/55'>Reach out to our team for quick assistance.</p>
-            <p className='text-white/55 text-lg'>sangeetbnl5@gmail.com</p>
-          </div>
+              <p className='text-2xl semi-bold'>Email</p>
+              <p className='text-white/55'>Reach out to our team for quick assistance.</p>
+              <p className='text-white/55 text-lg'>sangeetbnl5@gmail.com</p>
+            </div>
+          </AnimatedContent>
+          <AnimatedContent
+            distance={75}
+            direction="vertical"
+            reverse={false}
+            duration={1.5}
+            ease="power3.out"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.0}
+            threshold={0.2}
+            delay={0.1}
+          >
           <div className='flex flex-col gap-3'>
             <Image
-                src="/CallIcon.avif"
-                alt="Background image"
-                height={60}
-                width={60}
-              />
+              src="/CallIcon.avif"
+              alt="Background image"
+              height={60}
+              width={60}
+            />
             <p className='text-2xl semi-bold'>Call</p>
             <p className='text-white/55'>Drop a message, and we’ll get back to you soon.</p>
             <p className='text-white/55 text-lg'>+91 88475 XXXXX</p>
           </div>
+          </AnimatedContent>
         </div>
 
         <div className='w-1/2'>Form</div>

@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import ScrollFloat from './ScrollFloat';
 
 const Section6 = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -39,8 +40,25 @@ const Section6 = () => {
           className="text-6xl font-medium leading-tight"
           style={{ fontFamily: '"Inter Display"' }}
         >
-          <span>Casting Clarity :</span>{' '}
-          <span className="text-white/55">Common Questions About Decidely</span>
+          <ScrollFloat
+                        animationDuration={1.5}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                    >
+                       Casting Clarity :
+                    </ScrollFloat>
+                    <ScrollFloat
+                        animationDuration={1.5}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                        textClassName = "text-white/55"
+                    >
+                       Common Questions About Decidely
+                    </ScrollFloat>
         </div>
       </div>
 

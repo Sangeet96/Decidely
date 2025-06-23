@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useState } from 'react'
+import ScrollFloat from './ScrollFloat';
 
 const Section3 = () => {
     const [selectedCard, setSelectedCard] = useState("business");
@@ -118,7 +119,15 @@ const Section3 = () => {
                         <div className="w-[40px] h-[3px] bg-white"></div>
                         <div className="text-xl font-bold" style={{ fontFamily: 'Inter' }}>For Whom?</div>
                     </div>
-                    <div className="w-[45vw] text-6xl font-medium leading-tight" style={{ fontFamily: '"Inter Display"' }}>Who Should Definitely Use Decidely?</div>
+                    <div className="w-[45vw] text-6xl font-medium" style={{ fontFamily: '"Inter Display"' }}><ScrollFloat
+                        animationDuration={1.5}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                    >
+                       Who Should Definitely Use Decidely?
+                    </ScrollFloat></div>
                 </div>
 
                 <div className="flex gap-16 mb-8">

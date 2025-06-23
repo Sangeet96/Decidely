@@ -1,4 +1,6 @@
+'use client'
 import React from 'react'
+import ScrollFloat from './ScrollFloat';
 
 const Section5 = () => {
     return (
@@ -9,9 +11,26 @@ const Section5 = () => {
                     <div className="w-[40px] h-[3px] bg-white"></div>
                     <div className="text-xl font-bold" style={{ fontFamily: 'Inter' }}>How it Works?</div>
                 </div>
-                <div className="text-6xl font-medium leading-tight" style={{ fontFamily: '"Inter Display"' }}>
-                    <span>From Start to Vote :</span>{' '}
-                    <span className="text-white/55">The Voting Process Unfolded</span>
+                <div className="text-6xl font-medium" style={{ fontFamily: '"Inter Display"' }}>
+                    <ScrollFloat
+                        animationDuration={1.5}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                    >
+                       From Start to Vote :
+                    </ScrollFloat>
+                    <ScrollFloat
+                        animationDuration={1.5}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                        textClassName = "text-white/55"
+                    >
+                       The Voting Process Unfolded
+                    </ScrollFloat>
                 </div>
             </div>
 

@@ -2,6 +2,8 @@
 import React from 'react'
 import Silk from '@/components/Silk'
 import Image from 'next/image'
+import SplitText from '@/components/SplitText'
+import BlurText from '@/components/BlurText'
 
 const About = () => {
   return (
@@ -15,7 +17,20 @@ const About = () => {
           rotation={0}
         /></div>
         <section className="p-24">
-          <div className=""><h1 className="text-[11vw] text-center" style={{ fontFamily: '"Inknut Antiqua"' }}>About Me</h1></div>
+          <div className="" style={{ fontFamily: '"Inknut Antiqua"' }}>
+            <SplitText
+              text="About Me"
+              className="text-[11vw] text-center"
+              delay={150}
+              duration={0.8}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+            /></div>
           <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-black pointer-events-none z-10" />
         </section>
       </div>
@@ -31,8 +46,20 @@ const About = () => {
           className="text-6xl font-medium leading-tight"
           style={{ fontFamily: '"Inter Display"' }}
         >
-          <span>Innovator, Developer, Visionary — </span>{' '}
-          <span className="text-white/55">Your Next Team Member</span>
+          <BlurText
+            text="Innovator, Developer, Visionary — "
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className=""
+          />
+          <BlurText
+            text="Your Next Team Member"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className="text-white/55"
+          />
         </div>
       </div>
 
