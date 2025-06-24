@@ -57,61 +57,6 @@ const Login = () => {
         </div>
       </div>
 
-      <div className='flex justify-center items-center pl-10 pr-10 gap-5'>
-        <div className='w-1/2 flex gap-18'>
-          <AnimatedContent
-            distance={75}
-            direction="vertical"
-            reverse={false}
-            duration={1.5}
-            ease="power3.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.0}
-            threshold={0.2}
-            delay={0.1}
-          >
-            <div className='flex flex-col gap-3'>
-              <Image
-                src="/EmailIcon.avif"
-                alt="Background image"
-                height={60}
-                width={60}
-              />
-              <p className='text-2xl semi-bold'>Email</p>
-              <p className='text-white/55'>Reach out to our team for quick assistance.</p>
-              <p className='text-white/55 text-lg'>sangeetbnl5@gmail.com</p>
-            </div>
-          </AnimatedContent>
-          <AnimatedContent
-            distance={75}
-            direction="vertical"
-            reverse={false}
-            duration={1.5}
-            ease="power3.out"
-            initialOpacity={0.2}
-            animateOpacity
-            scale={1.0}
-            threshold={0.2}
-            delay={0.1}
-          >
-          <div className='flex flex-col gap-3'>
-            <Image
-              src="/CallIcon.avif"
-              alt="Background image"
-              height={60}
-              width={60}
-            />
-            <p className='text-2xl semi-bold'>Call</p>
-            <p className='text-white/55'>Drop a message, and we’ll get back to you soon.</p>
-            <p className='text-white/55 text-lg'>+91 88475 XXXXX</p>
-          </div>
-          </AnimatedContent>
-        </div>
-
-        <div className='w-1/2'>Form</div>
-      </div>
-
     </div>
   )
 }

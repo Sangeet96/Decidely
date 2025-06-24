@@ -5,8 +5,24 @@ import Image from 'next/image'
 import SplitText from '@/components/SplitText'
 import BlurText from '@/components/BlurText'
 import AnimatedContent from '@/components/AnimatedContent'
+import { useState } from 'react'
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    contactNumber: '',
+    query: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   return (
     <div className='text-white'>
       <div className='absolute top-0 h-1/2 w-[100vw]'>
@@ -102,21 +118,69 @@ const Contact = () => {
             threshold={0.2}
             delay={0.1}
           >
-          <div className='flex flex-col gap-3'>
-            <Image
-              src="/CallIcon.avif"
-              alt="Background image"
-              height={60}
-              width={60}
-            />
-            <p className='text-2xl semi-bold'>Call</p>
-            <p className='text-white/55'>Drop a message, and we’ll get back to you soon.</p>
-            <p className='text-white/55 text-lg'>+91 88475 XXXXX</p>
-          </div>
+            <div className='flex flex-col gap-3'>
+              <Image
+                src="/CallIcon.avif"
+                alt="Background image"
+                height={60}
+                width={60}
+              />
+              <p className='text-2xl semi-bold'>Call</p>
+              <p className='text-white/55'>Drop a message, and we’ll get back to you soon.</p>
+              <p className='text-white/55 text-lg'>+91 88475 XXXXX</p>
+            </div>
           </AnimatedContent>
         </div>
 
-        <div className='w-1/2'>Form</div>
+        <div className='w-1/2'>
+          <form onSubmit={""}>
+            <label>First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+
+            <label>Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+
+            <label>Contact Number</label>
+            <input
+              type="tel"
+              name="contactNumber"
+              value={formData.contactNumber}
+              onChange={handleChange}
+            />
+
+            <label>Query</label>
+            <textarea
+              name="query"
+              value={formData.query}
+              onChange={handleChange}
+              rows="4"
+              required
+            />
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
 
     </div>
